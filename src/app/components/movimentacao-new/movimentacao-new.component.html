@@ -1,37 +1,37 @@
-<div class="container">
-  <div class="jumbotron">
+<div class="container justify-content-center d-flex">
+  <div class="jumbotron w-75">
     <h1 class="display-6">Movimentação</h1>
     <h5>Inclusão de uma nova movimentação</h5>
     <hr class="my-2">
 
        <div class="col-md-3">
-        <label for="iData"  class="form-label">Data</label>
+        <label for="iData"  class="form-label mb-0  mt-2">Data</label>
         <input type="date" [(ngModel)]="dataHora" class="form-control" id="iData" >
        </div>
        <div class="col-md-9">
-        <label for="iCorrentista"  class="form-label">Correntista</label>
+        <label for="iCorrentista"  class="form-label  mb-0  mt-2">Correntista</label>
         <select id="iCorrentista" [(ngModel)]="correntista" class="form-select">
           <option *ngFor="let c of correntistas" [ngValue]="c">{{c.cpf}} - {{c.nome}}</option>
         </select>
        </div>
        <div class="col-12">
-         <label for="iDescricao" class="form-label">Descrição</label>
+         <label for="iDescricao" class="form-label  mb-0  mt-2">Descrição</label>
          <input type="text"  [(ngModel)]="descricao" class="form-control" id="iDescricao" placeholder="Imforme uma Descrição">
        </div>
        <div class="col-md-3">
-        <label for="iTipo"  class="form-label">Tipo de Movimentação</label>
+        <label for="iTipo"  class="form-label  mb-0  mt-2">Tipo de Movimentação</label>
         <select id="iTipo" class="form-select" [(ngModel)]="tipo">
           <option selected>RECEITA</option>
           <option >DESPESA</option>
         </select>
        </div>
        <div class="col-md-2">
-         <label for="iValor"  class="form-label">R$ Valor</label>
+         <label for="iValor"  class="form-label  mb-0 mt-2">R$ Valor</label>
          <input type="text" [(ngModel)]="valor" currencyMask class="form-control" id="iValor" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" value="0,00">
        </div>
        <div class="d-grid gap-2 d-md-flex">
-          <button (click)="save()" class="btn btn-outline-primary me-md-2">Confirmar</button>
-          <a routerLink="/movimentacoes" class="btn btn-outline-primary me-md-2">Cancelar</a>
+          <button (click)="save()" class="btn btn-outline-primary me-md-2  my-3">Confirmar</button>
+          <a routerLink="/movimentacoes" class="btn btn-outline-primary me-md-2  my-3">Cancelar</a>
        </div>
   </div>
 </div>
